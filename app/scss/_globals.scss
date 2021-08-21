@@ -96,7 +96,10 @@ h2 {
 }
 
 p{
-    font-size: $font-sm;    
+    font-size: $font-sm;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;   
 }
 
 //center text helper

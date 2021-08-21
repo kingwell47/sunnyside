@@ -98,6 +98,9 @@ h2 {
 
 p {
   font-size: 1rem;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
 }
 
 .center-text {
@@ -261,11 +264,19 @@ p {
 
 .features__element .text-wrapper {
   height: 27.375rem;
+  padding: 0 1.875rem;
 }
 
 @media (min-width: 40em) {
   .features__element .text-wrapper {
     height: 37.5rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .features__element .text-wrapper div:not(.center-text) {
+    padding-left: 10.125rem;
+    padding-right: 6.5rem;
   }
 }
 
@@ -277,12 +288,52 @@ p {
   .features__element__text:not(.center-text) {
     text-align: left;
   }
+  .features__element__text:not(.center-text) h2 {
+    font-size: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.features__element__text > h2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 2.125rem;
+}
+
+@media (min-width: 40em) {
+  .features__element__text > h2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.features__element__text > p {
+  padding-bottom: 2.5rem;
 }
 
 .features__element__text > a {
   text-transform: uppercase;
   color: #23303e;
   font-size: 1rem;
+  position: relative;
+}
+
+.features__element__text a:after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  bottom: -3px;
+  height: 10px;
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 25%;
+  -webkit-transition: opacity ease-in-out 350ms;
+  transition: opacity ease-in-out 350ms;
+}
+
+.features__element__text a:hover:after {
+  opacity: 100%;
 }
 
 .features__element .photo_text {
@@ -298,7 +349,7 @@ p {
           order: 1;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .features #transform_image {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -312,12 +363,16 @@ p {
           order: 2;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .features #transform_text {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
+}
+
+.features #transform_text a:after {
+  background-color: #fad400;
 }
 
 .features #stand-out_image {
@@ -330,6 +385,10 @@ p {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
+}
+
+.features #stand-out_text a:after {
+  background-color: #fe7867;
 }
 
 .features #graphic_design {
@@ -345,6 +404,10 @@ p {
   }
 }
 
+.features #graphic_design h2, .features #graphic_design p {
+  color: #25564b;
+}
+
 .features #photography {
   -webkit-box-ordinal-group: 7;
       -ms-flex-order: 6;
@@ -358,9 +421,16 @@ p {
   }
 }
 
+.features #photography h2, .features #photography p {
+  color: #19536b;
+}
+
 .features #photography, .features #graphic_design {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+  padding-left: 10.3125rem;
+  padding-bottom: 1.375rem;
+  padding-right: 10.3125rem;
 }
 /*# sourceMappingURL=style.css.map */
