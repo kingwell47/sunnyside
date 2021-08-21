@@ -1,31 +1,67 @@
-.features {  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 2.5rem;
+.features {    
+    flex-wrap: wrap;
 
-    //flex-wrap: wrap;
+    @include breakpoint-up(medium) {
+        padding: 0; 
+    }    
 
     &__element {
-        border: 1px solid magenta; //remove       
-        display: flex;
-        //height: 37.5rem;
+        border: 1px solid magenta; //remove
+        min-width: 23.375rem;
+        max-width: 23.4375rem;     
 
-        > img {
-            object-fit: cover;            
-            height: 19.563rem;
-        }        
+        @include breakpoint-up(medium) {
+            flex: 50%;
+            max-width: 90rem;                    
+        }
+
+        .image{                
+            height: 19.5rem;            
+            background-repeat: no-repeat;
+            
+            @include breakpoint-down(small) {
+                background-size: 100%;
+            }
+            
+            @include breakpoint-up(medium) {
+                height: 27.5rem;
+                background-position: center center;                    
+            }
+            
+            @include breakpoint-up(medium) {
+                height: 37.5rem;                    
+            }
+            &-transform {                
+                background-image: url("/images/mobile/image-transform.jpg");                
+
+                @include breakpoint-up(medium) {
+                    background-image: url("/images/desktop/image-transform.jpg");                                       
+                }
+            }
+            &-stand-out {
+                background-image: url("/images/mobile/image-stand-out.jpg");                
+
+                @include breakpoint-up(medium) {
+                    background-image: url("/images/desktop/image-stand-out.jpg");                    
+                }
+            }
+        }                
         
+
         &__text{
-            height: 27.375rem;
-            padding-top: 4.25rem;
-            text-align: center;           
+            
+            text-align: center; 
+            
+            @include breakpoint-up(medium) {
+                height: 37.5rem;
+                text-align: left;                                    
+            }
             
             > h2 {
-                margin-bottom: 2rem;
+                
             }
-            > p {
-                margin-bottom: 2.125rem;
+            > p {                
+                
             }
             > a {
                 text-transform: uppercase;
@@ -34,5 +70,28 @@
             }
         }
 
-    }   
+    }
+    
+    //change position in dekstop view
+    #transform_image {
+        order: 1;
+        @include breakpoint-up(large) {
+            order: 2;                    
+        }
+    }
+
+    #transform_text {
+        order: 2;
+        @include breakpoint-up(large) {
+            order: 1;                    
+        }
+    }
+
+    #stand-out_image {
+        order: 3;
+    }
+
+    #stand-out_text {
+        order: 4;
+    }
 }
