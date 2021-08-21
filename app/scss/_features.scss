@@ -1,0 +1,38 @@
+.features {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2.5rem;
+
+    //flex-wrap: wrap;
+
+    &__element {
+        border: 1px solid magenta; //remove       
+        display: flex;
+        //height: 37.5rem;
+
+        > img {
+            object-fit: cover;            
+            height: 19.563rem;
+        }        
+        
+        &__text{
+            height: 27.375rem;
+            padding-top: 4.25rem;
+            text-align: center;           
+            
+            > h2 {
+                margin-bottom: 2rem;
+            }
+            > p {
+                margin-bottom: 2.125rem;
+            }
+            > a {
+                text-transform: uppercase;
+                color: $veryDarkDesaturatedBlue;
+                font-size: $font-sm;                
+            }
+        }
+
+    }   
+}

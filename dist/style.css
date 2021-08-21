@@ -21,11 +21,10 @@ body {
 
 a, a:visited, a:hover {
   text-decoration: none;
-  color: white;
+  font-family: 'Fraunces', serif;
 }
 
 .text_big {
-  font-family: 'Fraunces', serif;
   font-weight: 700;
 }
 
@@ -60,6 +59,7 @@ a, a:visited, a:hover {
 button, .button {
   padding: 1.25rem 2.0625rem;
   background-color: white;
+  font-family: 'Fraunces', serif;
   font-size: 0.875rem;
   color: #23303e;
   text-align: center;
@@ -83,6 +83,21 @@ button, .button {
 
 .container {
   margin: 0 auto;
+  max-width: 90rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+}
+
+h2 {
+  color: #23303e;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
 }
 
 .header {
@@ -106,7 +121,6 @@ button, .button {
 
 .header .nav {
   margin-bottom: 2rem;
-  max-width: 90rem;
   margin: auto;
 }
 
@@ -135,6 +149,7 @@ button, .button {
 
 .header__links a {
   font-size: 1rem;
+  color: white;
 }
 
 .header__links a:not(:last-child) {
@@ -149,7 +164,13 @@ button, .button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 5.625rem;
+  margin-top: 4.625rem;
+}
+
+@media (min-width: 40em) {
+  .header .text-and-arrow {
+    margin-top: 5.625rem;
+  }
 }
 
 .header__text {
@@ -157,13 +178,62 @@ button, .button {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 8px;
-  margin-bottom: 6.25rem;
+  margin-bottom: 3.375rem;
+  font-size: 2rem;
 }
 
 @media (min-width: 64em) {
   .header__text {
     letter-spacing: 13px;
+    margin-bottom: 6.25rem;
     font-size: 2.563rem;
   }
+}
+
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2.5rem;
+}
+
+.features__element {
+  border: 1px solid magenta;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features__element > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 19.563rem;
+}
+
+.features__element__text {
+  height: 27.375rem;
+  padding-top: 4.25rem;
+  text-align: center;
+}
+
+.features__element__text > h2 {
+  margin-bottom: 2rem;
+}
+
+.features__element__text > p {
+  margin-bottom: 2.125rem;
+}
+
+.features__element__text > a {
+  text-transform: uppercase;
+  color: #23303e;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
