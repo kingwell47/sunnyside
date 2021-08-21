@@ -194,12 +194,12 @@ p {
 .features {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media (min-width: 40em) {
-  .features {
-    padding: 0;
-  }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .features__element {
@@ -261,13 +261,22 @@ p {
   }
 }
 
+.features__element .text-wrapper {
+  height: 27.375rem;
+}
+
+@media (min-width: 40em) {
+  .features__element .text-wrapper {
+    height: 37.5rem;
+  }
+}
+
 .features__element__text {
   text-align: center;
 }
 
 @media (min-width: 40em) {
   .features__element__text {
-    height: 37.5rem;
     text-align: left;
   }
 }

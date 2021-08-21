@@ -1,9 +1,9 @@
 .features {    
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
-    @include breakpoint-up(medium) {
-        padding: 0; 
-    }    
+       
 
     &__element {
         border: 1px solid magenta; //remove
@@ -12,7 +12,7 @@
 
         @include breakpoint-up(medium) {
             flex: 50%;
-            max-width: 90rem;                    
+            max-width: 90rem;                                
         }
 
         .image{                
@@ -47,13 +47,17 @@
             }
         }                
         
+        .text-wrapper {
+            height: 27.375rem;            
+            @include breakpoint-up(medium) {                
+                height: 37.5rem;                                    
+            }
+        }
 
-        &__text{
+        &__text{            
+            text-align: center;            
             
-            text-align: center; 
-            
-            @include breakpoint-up(medium) {
-                height: 37.5rem;
+            @include breakpoint-up(medium) {                
                 text-align: left;                                    
             }
             
