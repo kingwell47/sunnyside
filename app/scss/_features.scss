@@ -5,10 +5,11 @@
 
        
 
-    &__element {
-        border: 1px solid magenta; //remove
-        min-width: 23.375rem;
-        max-width: 23.4375rem;     
+    &__element {        
+        //min-width: 23.375rem;
+        //max-width: 23.4375rem;
+        flex: 100%;
+             
 
         @include breakpoint-up(medium) {
             flex: 50%;
@@ -18,19 +19,17 @@
         .image{                
             height: 19.5rem;            
             background-repeat: no-repeat;
+            background-position: center center;
             
             @include breakpoint-down(small) {
-                background-size: 100%;
+                background-size: cover;
             }
             
             @include breakpoint-up(medium) {
-                height: 27.5rem;
-                background-position: center center;                    
-            }
-            
-            @include breakpoint-up(medium) {
-                height: 37.5rem;                    
-            }
+                height: 37.5rem;
+                                    
+            }            
+           
             &-transform {                
                 background-image: url("/images/mobile/image-transform.jpg");                
 
@@ -132,10 +131,9 @@
 
     #photography, #graphic_design {
         background-repeat: no-repeat;
-
-        @include breakpoint-down(small) {
-            background-size: 100%;
-        }
+        background-size: cover;
+        background-position: top center; 
+        
     }
 
 }

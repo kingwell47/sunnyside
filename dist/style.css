@@ -207,9 +207,9 @@ p {
 }
 
 .features__element {
-  border: 1px solid magenta;
-  min-width: 23.375rem;
-  max-width: 23.4375rem;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
 }
 
 @media (min-width: 40em) {
@@ -224,18 +224,12 @@ p {
 .features__element .image {
   height: 19.5rem;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
 @media (max-width: 39.9375em) {
   .features__element .image {
-    background-size: 100%;
-  }
-}
-
-@media (min-width: 40em) {
-  .features__element .image {
-    height: 27.5rem;
-    background-position: center center;
+    background-size: cover;
   }
 }
 
@@ -366,11 +360,7 @@ p {
 
 .features #photography, .features #graphic_design {
   background-repeat: no-repeat;
-}
-
-@media (max-width: 39.9375em) {
-  .features #photography, .features #graphic_design {
-    background-size: 100%;
-  }
+  background-size: cover;
+  background-position: top center;
 }
 /*# sourceMappingURL=style.css.map */
