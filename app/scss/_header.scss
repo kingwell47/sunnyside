@@ -1,0 +1,72 @@
+.header {
+    padding: 32px 25px;
+    background-image: url(/images/mobile/image-header.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;    
+    height: 33.625rem;
+    margin: auto;
+
+    @include breakpoint-up(medium) {
+        background-image: url(/images/desktop/image-header.jpg);
+        background-size: cover;
+        background-position: center bottom;        
+        height: 50rem;
+    }
+    .nav {
+        margin-bottom: 2rem;
+        max-width: 90rem;
+        margin: auto;        
+    }
+    &__logo {
+        flex: 2;        
+
+    }
+
+    &__mobile-menu {
+        
+
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $white;
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__links {
+        flex: 1;
+        a {
+            font-size: $font-sm;
+
+            &:not(:last-child){
+                margin-right: 50px;
+            }
+        }                    
+    }
+    
+    .text-and-arrow {
+        flex-direction: column;
+        align-items: center; 
+        margin-top: 5.625rem;      
+    }
+    
+    &__text {
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        margin-bottom: 6.25rem;
+
+        @include breakpoint-up(large){
+            letter-spacing: 13px;
+            font-size: $font-xxl;
+        }
+    }    
+    
+
+}
