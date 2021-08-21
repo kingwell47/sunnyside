@@ -57,9 +57,15 @@
         &__text{            
             text-align: center;            
             
-            @include breakpoint-up(medium) {                
-                text-align: left;                                    
+            &:not(.center-text) {
+                @include breakpoint-up(medium) {                
+                    text-align: left;            
+                    
+                }
             }
+
+            
+        
             
             > h2 {
                 
@@ -74,11 +80,17 @@
             }
         }
 
+        .photo_text {
+            height: 37.5rem;
+            align-items: flex-end;
+        }
+
     }
-    
+
     //change position in dekstop view
     #transform_image {
         order: 1;
+        
         @include breakpoint-up(large) {
             order: 2;                    
         }
@@ -98,4 +110,32 @@
     #stand-out_text {
         order: 4;
     }
+
+    //last 2 items
+    #graphic_design {
+        order: 5;        
+        background-image: url("/images/mobile/image-graphic-design.jpg");
+
+        @include breakpoint-up(medium) {
+            background-image: url("/images/desktop/image-graphic-design.jpg");
+        }
+    }
+
+    #photography {
+        order: 6;        
+        background-image: url(/images/mobile/image-photography.jpg);
+
+        @include breakpoint-up(medium) {
+            background-image: url("/images/desktop/image-photography.jpg");
+        }
+    }
+
+    #photography, #graphic_design {
+        background-repeat: no-repeat;
+
+        @include breakpoint-down(small) {
+            background-size: 100%;
+        }
+    }
+
 }
