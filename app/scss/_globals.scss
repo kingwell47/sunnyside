@@ -10,7 +10,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Barlow', sans-serif;
+    font-family: $barlow;
     font-weight: 600;
     font-size: $font-md;
     color: $darkGrayishBlue;
@@ -19,7 +19,7 @@ body {
 
 a, a:visited, a:hover {
     text-decoration: none;
-    font-family: 'Fraunces', serif;    
+    font-family: $fraunces;    
 }
 
 //Flexbox
