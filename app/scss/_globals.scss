@@ -78,4 +78,10 @@ p{
     max-width: 90rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+
+    @include breakpoint-up(medium) {
+        padding-left: 2.375rem;
+        padding-right: 2.375rem;
+    }
+
 }
