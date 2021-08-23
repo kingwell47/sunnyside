@@ -1,37 +1,109 @@
 .header {
-    background-color: $darkBlue;
+    background-image: url(/images/desktop/image-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;     
+    height: 50rem;    
+    
+    @include breakpoint-down(small) {
+        background-image: url(/images/mobile/image-header.jpg);
+        height: 33.6875rem; 
+    }
 
     &__nav {
+        padding-top: 1.875rem;        
+        margin: auto;
 
+
+        @include breakpoint-up(large) {
+            padding-top: 1.5625rem;
+        }
+        
     }
 
     &__logo {
+        flex: 2;
 
-    }
-
-    &__menu {        
-        width: 10px;
-        height: 0.3125rem;
-        background-color: $darkGrayishBlue;
-        &:not(:last-child) {
-            margin-bottom: 0.3125rem;
+        @include breakpoint-down(medium) {
+            
         }
 
+        > img {
+            @include breakpoint-up(medium) {
+                width: 10.75rem;
+                height: auto
+            }
+        }
+    }
+
+    &__menu {                       
+
         > span {
-            
+            display: block;
+            width: 1.6875rem;
+            height: 0.125rem;
+            background-color: $white;
+            &:not(:last-child) {
+            margin-bottom: 0.375rem;
+            }
         }
     }
 
     &__links {
+        
+        text-align: center;
+        
+        a {
+            font-size: 1.0625rem;
+            color: $white;
+
+            &:not(:last-child){
+                margin-right: 50px;
+            }
+        }
 
     }
 
-    a.button {
+    a.button { 
+                
+        color: $veryDarkDesaturatedBlue;
+        background-color: $white;
+        font-family: $fraunces;
+        font-size: 0.8125rem;
+        text-transform: uppercase;
+        border-radius: 1.8125rem;
+        padding: 1rem 1.9375rem;
+    }
 
+    &__text-and-arrow {        
+        flex-direction: column;
+        align-items: center; 
+        margin-top: 5.6875rem;
+
+        @include breakpoint-up(medium) {
+            margin-top: 5.625rem;  
+        }
     }
 
     &__text {
+        margin-bottom: 3.125rem;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $fraunces;
+        font-size: 2.4375rem;
+        font-weight: 900;
+        letter-spacing: 8px;
+        line-height: 1.2;
+                
+        
 
+        @include breakpoint-up(large){
+            letter-spacing: 13px;
+            margin-bottom: 6.25rem;
+            font-size: 3.125rem;
+
+        }
     }
 
     .arrow {
