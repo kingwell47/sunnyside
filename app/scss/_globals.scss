@@ -18,8 +18,7 @@ body {
 }
 
 a, a:visited, a:hover {
-    text-decoration: none;
-    font-family: $fraunces;    
+    text-decoration: none;   
 }
 
 //Flexbox
@@ -73,4 +72,8 @@ p{
     line-height: 1.6;
     padding: 0;
     margin: 0;   
+}
+
+.container {
+    max-width: 90rem;
 }

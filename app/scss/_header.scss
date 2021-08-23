@@ -1,0 +1,41 @@
+.header {
+    background-color: $darkBlue;
+
+    &__nav {
+
+    }
+
+    &__logo {
+
+    }
+
+    &__menu {        
+        width: 10px;
+        height: 0.3125rem;
+        background-color: $darkGrayishBlue;
+        &:not(:last-child) {
+            margin-bottom: 0.3125rem;
+        }
+
+        > span {
+            
+        }
+    }
+
+    &__links {
+
+    }
+
+    a.button {
+
+    }
+
+    &__text {
+
+    }
+
+    .arrow {
+
+    }
+
+}
