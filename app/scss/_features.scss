@@ -1,0 +1,57 @@
+.features {    
+    flex-wrap: wrap;
+    
+
+    &__element {
+        flex: 100%; 
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+        text-align: center;
+
+        &.image {
+        height: 19.5rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+        }
+    }
+
+    &__title1 {
+        font-family: $fraunces;
+        color: $veryDarkDesaturatedBlue;
+        font-size: 1.875rem;
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    &__text1 {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+    }
+
+    &__link {        
+        font-family: $fraunces;
+        text-transform: uppercase;
+        color: $veryDarkDesaturatedBlue;
+        
+    }
+
+    &__element2 {
+        flex: 100%;
+        text-align: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__title2 {
+        font-family: $fraunces;        
+    }
+
+    &__text2 {
+
+    }
+}
