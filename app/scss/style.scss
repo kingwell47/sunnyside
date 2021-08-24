@@ -1,7 +1,7 @@
-@import "variables";
-@import "mixins";
-@import "globals";
-@import "animations";
+// @import "variables";
+// @import "mixins";
+@forward "globals";
+@forward "animations";
 
-@import "header";
-@import "features";
+@forward "header";
+@forward "features";
