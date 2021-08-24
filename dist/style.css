@@ -409,4 +409,55 @@ p {
 }
 .features#photography {
   order: 6;
+}
+
+.testimonials {
+  padding-top: 4.25rem;
+}
+.testimonials__headline {
+  text-align: center;
+  text-transform: uppercase;
+}
+.testimonials__headline > h3 {
+  font-size: 0.8125rem;
+  font-weight: 900;
+  letter-spacing: 0.3125rem;
+}
+.testimonials .elements-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials__element {
+  flex: 100%;
+  padding-top: 4.25rem;
+  text-align: center;
+}
+@media (min-width: 40em) {
+  .testimonials__element {
+    flex: 33.33%;
+  }
+}
+.testimonials__image > img {
+  border-radius: 50%;
+  height: 4.5rem;
+  width: auto;
+}
+.testimonials__text {
+  padding: 1.1875rem;
+}
+.testimonials__text > p {
+  font-size: 1.0625rem;
+  color: #23303e;
+  line-height: 1.8;
+}
+.testimonials__name {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: #23303e;
+  margin-bottom: 1rem;
+}
+.testimonials__title {
+  font-size: 0.625rem;
 }/*# sourceMappingURL=style.css.map */

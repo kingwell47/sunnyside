@@ -2,21 +2,52 @@
 @use "mixins" as mix;
 
 .testimonials {
+    padding-top: 4.25rem;
+    
 
     &__headline {
-
+        text-align: center;
+        text-transform: uppercase;        
+        > h3 {
+            font-size: 0.8125rem;
+            font-weight: 900;
+            letter-spacing: 0.3125rem;
+        }
     }
 
-    &__element {
-        
+    .elements-wrapper {
+        display: flex;
+        flex-wrap: wrap;    
+        justify-content: center;    
+        align-items: center;
+    }
+
+    &__element {        
+        flex: 100%;
+        padding-top: 4.25rem;
+        text-align: center;
+
+        @include mix.breakpoint-up(medium) {
+            flex: 33.33%;
+        }
     }
 
     &__image {
-
+        > img {
+            border-radius: 50%;
+            height: 4.5rem;
+            width: auto;
+        }
     }
 
     &__text {
-
+        padding: 1.1875rem;
+        > p {
+            font-size: 1.0625rem;
+            color: var.$veryDarkDesaturatedBlue;
+            line-height: 1.8;
+            
+        }
     }
 
     &__client {
@@ -24,10 +55,14 @@
     }
 
     &__name {
-
+        font-family: var.$fraunces;
+        font-weight: 900;
+        color: var.$veryDarkDesaturatedBlue;
+        margin-bottom: 1rem;
+        
     }
 
     &__title {
-        
+        font-size: 0.625rem;
     }
 }
