@@ -145,6 +145,7 @@ p {
   letter-spacing: -0.0625rem;
   border-radius: 1.8125rem;
   padding: 1.125rem 1.75rem;
+  font-weight: 900;
 }
 .header__menu {
   background-color: white;
@@ -181,6 +182,7 @@ p {
   background-color: #fad400;
   width: 8.75rem;
   margin: auto;
+  font-weight: 900;
 }
 .header__text-and-arrow {
   flex-direction: column;
@@ -216,11 +218,15 @@ p {
 }
 .features__element {
   flex: 100%;
-  display: flex;
-  flex-direction: column;
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
   text-align: center;
+}
+@media (min-width: 40em) {
+  .features__element {
+    flex: 50%;
+    text-align: left;
+  }
 }
 .features__element.image {
   height: 19.5rem;
@@ -228,8 +234,64 @@ p {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.features__element.text-wrapper {
-  justify-content: center;
+@media (min-width: 40em) {
+  .features__element.image {
+    height: 37.5rem;
+  }
+}
+.features__element.text {
+  height: 27.3125rem;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 64em) {
+  .features__element.text {
+    height: 37.5rem;
+    padding: 0 10rem;
+  }
+}
+.features__element.text.text-wrapper {
+  margin: auto;
+}
+.features__element#transform-image {
+  order: 1;
+  background-image: url(/images/mobile/image-transform.jpg);
+}
+@media (min-width: 40em) {
+  .features__element#transform-image {
+    order: 2;
+  }
+}
+@media (min-width: 40em) {
+  .features__element#transform-image {
+    background-image: url(/images/desktop/image-transform.jpg);
+  }
+}
+.features__element#transform-text {
+  order: 2;
+}
+@media (min-width: 40em) {
+  .features__element#transform-text {
+    order: 1;
+  }
+}
+.features__element#transform-text a:after {
+  background-color: #fad400;
+}
+.features__element#stand-out-image {
+  order: 3;
+  background-image: url(/images/mobile/image-stand-out.jpg);
+}
+@media (min-width: 40em) {
+  .features__element#stand-out-image {
+    background-image: url(/images/desktop/image-stand-out.jpg);
+  }
+}
+.features__element#stand-out-text {
+  order: 4;
+}
+.features__element#stand-out-text a:after {
+  background-color: #fe7867;
 }
 .features__title1 {
   margin-bottom: 2.5rem;
@@ -240,6 +302,16 @@ p {
   font-size: 1.875rem;
   font-weight: 900;
 }
+@media (min-width: 40em) {
+  .features__title1 > h2 {
+    font-size: 2.3125rem;
+  }
+}
+@media (min-width: 40em) {
+  .features__title1 {
+    padding: 0;
+  }
+}
 .features__text1 {
   margin-bottom: 2.5rem;
   padding: 0 1rem;
@@ -248,10 +320,33 @@ p {
   font-size: 1rem;
   line-height: 1.6;
 }
+@media (min-width: 40em) {
+  .features__text1 {
+    padding: 0;
+  }
+}
 .features__link {
   font-family: "Fraunces", serif;
   text-transform: uppercase;
   color: #23303e;
+  font-size: 0.875rem;
+  font-weight: 900;
+  position: relative;
+}
+.features__link:after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  bottom: -3px;
+  height: 10px;
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 25%;
+  transition: opacity ease-in-out 350ms;
+}
+.features__link:hover:after {
+  opacity: 100%;
 }
 .features__element2 {
   flex: 100%;
@@ -264,14 +359,40 @@ p {
   background-position: center center;
   padding-bottom: 3.875rem;
 }
-.features__element2.text-wrapper {
+@media (min-width: 40em) {
+  .features__element2 {
+    flex: 50%;
+    height: 37.5rem;
+    padding-left: 11.375rem;
+    padding-right: 11.375rem;
+  }
+}
+.features__element2.text {
   justify-content: flex-end;
+}
+.features__element2#graphic-design {
+  order: 5;
+  background-image: url(/images/mobile/image-graphic-design.jpg);
 }
 .features__element2#graphic-design h2, .features__element2#graphic-design p {
   color: #25564b;
 }
+@media (min-width: 40em) {
+  .features__element2#graphic-design {
+    background-image: url(/images/desktop/image-graphic-design.jpg);
+  }
+}
+.features__element2#photography {
+  order: 6;
+  background-image: url(/images/mobile/image-photography.jpg);
+}
 .features__element2#photography h2, .features__element2#photography p {
   color: #19536b;
+}
+@media (min-width: 40em) {
+  .features__element2#photography {
+    background-image: url(/images/desktop/image-photography.jpg);
+  }
 }
 .features__title2 {
   margin-bottom: 2rem;
@@ -282,4 +403,10 @@ p {
 }
 .features__text2 {
   font-size: 0.875rem;
+}
+.features#graphic-design {
+  order: 5;
+}
+.features#photography {
+  order: 6;
 }/*# sourceMappingURL=style.css.map */

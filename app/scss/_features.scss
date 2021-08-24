@@ -6,24 +6,86 @@
     
 
     &__element {
-        flex: 100%; 
-        display:flex;
-        flex-direction: column;
+        flex: 100%;         
         padding-top: 4.5rem;
         padding-bottom: 4.5rem;
         text-align: center;
+        
+        @include mix.breakpoint-up(medium) {
+            flex: 50%;
+            text-align: left;            
+        }
 
         &.image {
             height: 19.5rem;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
+
+            @include mix.breakpoint-up(medium) {
+                height: 37.5rem;
+            }
         
         }
 
-        &.text-wrapper {
-            justify-content: center;
+        &.text {            
+            height: 27.3125rem;
+            display: flex;
+            align-items: center;
+
+            @include mix.breakpoint-up(large) {
+                height: 37.5rem;
+                padding: 0 10rem;
+            }
+
+            &.text-wrapper {
+                margin: auto;
+            }
             
+        }
+        //ID properties for arrangement switching and individual colors, etc
+
+        &#transform-image {
+            order: 1;
+            background-image: url(/images/mobile/image-transform.jpg);
+
+            @include mix.breakpoint-up(medium) {
+                order: 2;
+            }
+
+            @include mix.breakpoint-up(medium) {
+                background-image: url(/images/desktop/image-transform.jpg);
+            }
+
+        }
+
+        &#transform-text {
+            order: 2;
+
+            @include mix.breakpoint-up(medium) {
+                order: 1;
+            }
+
+            & a:after {
+                background-color: var.$yellow;
+            }
+        }
+
+        &#stand-out-image {
+            order: 3;
+            background-image: url(/images/mobile/image-stand-out.jpg);
+
+            @include mix.breakpoint-up(medium) {
+                background-image: url(/images/desktop/image-stand-out.jpg);
+            }
+        }
+
+        &#stand-out-text {
+            order: 4;
+
+            & a:after {
+                background-color: var.$softRed;
+            }
         }
         
     }
@@ -37,6 +99,13 @@
             color: var.$veryDarkDesaturatedBlue;
             font-size: 1.875rem;            
             font-weight: 900;
+
+            @include mix.breakpoint-up(medium) {
+                font-size: 2.3125rem;
+            }
+        }
+        @include mix.breakpoint-up(medium) {
+            padding: 0;
         }
     }
 
@@ -48,13 +117,37 @@
             line-height: 1.6;
             
         }
+
+        @include mix.breakpoint-up(medium) {
+            padding: 0;
+        }
     }
 
     &__link {        
         font-family: var.$fraunces;
         text-transform: uppercase;
         color: var.$veryDarkDesaturatedBlue;
+        font-size: 0.875rem;
+        font-weight: 900; 
+        position: relative;       
         
+        &:after{
+            content: '';
+            position: absolute;
+            left: -8px;  
+            right: -8px;          
+            bottom: -3px;            
+            height: 10px;
+            border-radius: 25px;                    
+            z-index: -1;
+            opacity: 25%;
+            transition: opacity ease-in-out 350ms;            
+        }
+
+        &:hover:after {
+            opacity: 100%
+        }
+
     }
 
     &__element2 {
@@ -66,21 +159,42 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        padding-bottom: 3.875rem;        
+        padding-bottom: 3.875rem;
+        
+        @include mix.breakpoint-up(medium) {
+            flex: 50%;
+            height: 37.5rem;
+            padding-left: 11.375rem;
+            padding-right: 11.375rem;
+        }
 
-        &.text-wrapper {
+        &.text {
             justify-content: flex-end;
         }
 
         &#graphic-design {
+            order: 5;
+            background-image: url(/images/mobile/image-graphic-design.jpg);
+            
             h2, p {
                 color: var.$darkDesaturatedCyan;
+            }
+
+            @include mix.breakpoint-up(medium) {
+                background-image: url(/images/desktop/image-graphic-design.jpg);
             }
         }
 
         &#photography {
+            order: 6;
+            background-image: url(/images/mobile/image-photography.jpg);
+
             h2, p {
                 color: var.$darkBlue;
+            }
+
+            @include mix.breakpoint-up(medium) {
+                background-image: url(/images/desktop/image-photography.jpg);
             }
         }
 
@@ -100,30 +214,14 @@
         font-size: 0.875rem;
     }
 
-    //ID properties for arrangement switching and individual colors, etc
-
-    &#transform-image {
-
-    }
-
-    &#transform-text {
-
-    }
-
-    &#stand-out-image {
-
-    }
-
-    &#stand-out-text {
-
-    }
+    
 
     &#graphic-design {
-       
+        order: 5;
     }
  
     &#photography {
-
+        order: 6;
     }
 
 

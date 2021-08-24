@@ -82,6 +82,7 @@
         letter-spacing: -0.0625rem;
         border-radius: 1.8125rem;
         padding: 1.125rem 1.75rem;
+        font-weight: 900;
     }
 
     &__menu {        
@@ -94,7 +95,7 @@
         position: absolute;
         width: calc(100% - 2.75rem);
         left: 50%;
-        transform: translatex(-50%);      
+        transform: translatex(-50%);
         
         
 
@@ -125,7 +126,8 @@
         a.button {
             background-color: var.$yellow;
             width: 8.75rem;
-            margin: auto;            
+            margin: auto;
+            font-weight: 900;            
             
         }
     }
