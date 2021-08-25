@@ -3,7 +3,11 @@
 
 .testimonials {
     padding-top: 4.25rem;
-    
+    padding-bottom: 5.625rem;
+
+    @include mix.breakpoint-up(xlarge) {
+        padding: 10.125rem 6.375rem;
+    }
 
     &__headline {
         text-align: center;
@@ -12,6 +16,11 @@
             font-size: 0.8125rem;
             font-weight: 900;
             letter-spacing: 0.3125rem;
+            color: var.$grayishBlue;
+
+            @include mix.breakpoint-up(medium) {
+                font-size: 1.125rem;
+            }
         }
     }
 
@@ -20,10 +29,16 @@
         flex-wrap: wrap;    
         justify-content: center;    
         align-items: center;
+
+        @include mix.breakpoint-up(medium) {
+            align-items: flex-start;
+        }
     }
 
     &__element {        
         flex: 100%;
+        display: flex;
+        flex-direction: column;
         padding-top: 4.25rem;
         text-align: center;
 
@@ -41,10 +56,16 @@
     }
 
     &__text {
-        padding: 1.1875rem;
+        padding: 2.375rem 1.1875rem;
+        flex: 2;
+        @include mix.breakpoint-up(large){
+            height: 14rem;
+            padding: 4rem 1.1875rem;
+        }
+    
         > p {
             font-size: 1.0625rem;
-            color: var.$veryDarkDesaturatedBlue;
+            color: var.$veryDarkGrayishBlue;
             line-height: 1.8;
             
         }
@@ -63,6 +84,7 @@
     }
 
     &__title {
-        font-size: 0.625rem;
+        font-size: 0.875rem;
+        color: var.$grayishBlue;
     }
 }
