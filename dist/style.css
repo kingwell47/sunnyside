@@ -151,6 +151,11 @@ p {
   border-radius: 1.8125rem;
   padding: 1.125rem 1.75rem;
   font-weight: 900;
+  transition: all 250ms ease-in-out;
+}
+.header a.button:hover {
+  background-color: #70cfff;
+  color: white;
 }
 .header__menu {
   background-color: white;
@@ -493,4 +498,68 @@ p {
 .testimonials__title {
   font-size: 0.875rem;
   color: #a7abae;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 40em) {
+  .gallery {
+    flex-wrap: nowrap;
+  }
+}
+.gallery__image {
+  height: 11.6875rem;
+  flex: 50%;
+}
+@media (min-width: 75em) {
+  .gallery__image {
+    height: 28rem;
+    flex: 25%;
+  }
+}
+.gallery__image--milk {
+  background-image: url(/images/mobile/image-gallery-milkbottles.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 40em) {
+  .gallery__image--milk {
+    background-image: url(/images/desktop/image-gallery-milkbottles.jpg);
+  }
+}
+.gallery__image--orange {
+  background-image: url(/images/mobile/image-gallery-orange.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 40em) {
+  .gallery__image--orange {
+    background-image: url(/images/desktop/image-gallery-orange.jpg);
+  }
+}
+.gallery__image--cone {
+  background-image: url(/images/mobile/image-gallery-cone.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 40em) {
+  .gallery__image--cone {
+    background-image: url(/images/desktop/image-gallery-cone.jpg);
+  }
+}
+.gallery__image--cubes {
+  background-image: url(/images/mobile/image-gallery-sugar-cubes.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 40em) {
+  .gallery__image--cubes {
+    background-image: url(/images/desktop/image-gallery-sugarcubes.jpg);
+  }
 }/*# sourceMappingURL=style.css.map */

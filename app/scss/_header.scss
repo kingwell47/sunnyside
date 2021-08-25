@@ -83,6 +83,12 @@
         border-radius: 1.8125rem;
         padding: 1.125rem 1.75rem;
         font-weight: 900;
+        transition: all 250ms ease-in-out;
+
+        &:hover {
+            background-color: var.$lightBlueButtonHover;
+            color: var.$white;
+        }
     }
 
     &__menu {        
