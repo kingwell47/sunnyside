@@ -81,6 +81,7 @@ p {
 
 .hidden {
   visibility: hidden;
+  opacity: 0;
 }
 
 .header {
@@ -162,6 +163,7 @@ p {
   width: calc(100% - 2.75rem);
   left: 50%;
   transform: translatex(-50%);
+  transition: all 250ms ease-in-out;
 }
 .header__menu::after {
   content: "";
