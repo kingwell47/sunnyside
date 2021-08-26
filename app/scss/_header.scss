@@ -2,14 +2,14 @@
 @use "mixins" as mix;
 
 .header {
-    background-image: url(/images/desktop/image-header.jpg);
+    background-image: url(./images/desktop/image-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;     
     height: 50rem;    
     
     @include mix.breakpoint-down(small) {
-        background-image: url(/images/mobile/image-header.jpg);
+        background-image: url(./images/mobile/image-header.jpg);
         height: 33.6875rem; 
     }
 
