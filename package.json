@@ -19,12 +19,6 @@
     "url": "https://github.com/kingwell47/sunnyside/issues"
   },
   "homepage": "https://github.com/kingwell47/sunnyside#readme",
-  "dependencies": {
-    "gulp-sass": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.38.1"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
