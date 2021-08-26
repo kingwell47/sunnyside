@@ -49,14 +49,14 @@
 
         &#transform-image {
             order: 1;
-            background-image: url(./images/mobile/image-transform.jpg);
+            background-image: url(/images/mobile/image-transform.jpg);
 
             @include mix.breakpoint-up(medium) {
                 order: 2;
             }
 
             @include mix.breakpoint-up(medium) {
-                background-image: url(./images/desktop/image-transform.jpg);
+                background-image: url(/images/desktop/image-transform.jpg);
             }
 
         }
@@ -75,10 +75,10 @@
 
         &#stand-out-image {
             order: 3;
-            background-image: url(./images/mobile/image-stand-out.jpg);
+            background-image: url(/images/mobile/image-stand-out.jpg);
 
             @include mix.breakpoint-up(medium) {
-                background-image: url(./images/desktop/image-stand-out.jpg);
+                background-image: url(/images/desktop/image-stand-out.jpg);
             }
         }
 
@@ -176,27 +176,27 @@
 
         &#graphic-design {
             order: 5;
-            background-image: url(./images/mobile/image-graphic-design.jpg);
+            background-image: url(/images/mobile/image-graphic-design.jpg);
             
             h2, p {
                 color: var.$darkDesaturatedCyan;
             }
 
             @include mix.breakpoint-up(medium) {
-                background-image: url(./images/desktop/image-graphic-design.jpg);
+                background-image: url(/images/desktop/image-graphic-design.jpg);
             }
         }
 
         &#photography {
             order: 6;
-            background-image: url(./images/mobile/image-photography.jpg);
+            background-image: url(/images/mobile/image-photography.jpg);
 
             h2, p {
                 color: var.$darkBlue;
             }
 
             @include mix.breakpoint-up(medium) {
-                background-image: url(./images/desktop/image-photography.jpg);
+                background-image: url(/images/desktop/image-photography.jpg);
             }
         }
 

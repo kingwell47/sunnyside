@@ -85,7 +85,7 @@ p {
 }
 
 .header {
-  background-image: url(./images/desktop/image-header.jpg);
+  background-image: url(/images/desktop/image-header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -93,7 +93,7 @@ p {
 }
 @media (max-width: 39.9375em) {
   .header {
-    background-image: url(./images/mobile/image-header.jpg);
+    background-image: url(/images/mobile/image-header.jpg);
     height: 33.6875rem;
   }
 }
@@ -266,7 +266,7 @@ p {
 }
 .features__element#transform-image {
   order: 1;
-  background-image: url(./images/mobile/image-transform.jpg);
+  background-image: url(/images/mobile/image-transform.jpg);
 }
 @media (min-width: 40em) {
   .features__element#transform-image {
@@ -275,7 +275,7 @@ p {
 }
 @media (min-width: 40em) {
   .features__element#transform-image {
-    background-image: url(./images/desktop/image-transform.jpg);
+    background-image: url(/images/desktop/image-transform.jpg);
   }
 }
 .features__element#transform-text {
@@ -291,11 +291,11 @@ p {
 }
 .features__element#stand-out-image {
   order: 3;
-  background-image: url(./images/mobile/image-stand-out.jpg);
+  background-image: url(/images/mobile/image-stand-out.jpg);
 }
 @media (min-width: 40em) {
   .features__element#stand-out-image {
-    background-image: url(./images/desktop/image-stand-out.jpg);
+    background-image: url(/images/desktop/image-stand-out.jpg);
   }
 }
 .features__element#stand-out-text {
@@ -383,26 +383,26 @@ p {
 }
 .features__element2#graphic-design {
   order: 5;
-  background-image: url(./images/mobile/image-graphic-design.jpg);
+  background-image: url(/images/mobile/image-graphic-design.jpg);
 }
 .features__element2#graphic-design h2, .features__element2#graphic-design p {
   color: #25564b;
 }
 @media (min-width: 40em) {
   .features__element2#graphic-design {
-    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-image: url(/images/desktop/image-graphic-design.jpg);
   }
 }
 .features__element2#photography {
   order: 6;
-  background-image: url(./images/mobile/image-photography.jpg);
+  background-image: url(/images/mobile/image-photography.jpg);
 }
 .features__element2#photography h2, .features__element2#photography p {
   color: #19536b;
 }
 @media (min-width: 40em) {
   .features__element2#photography {
-    background-image: url(./images/desktop/image-photography.jpg);
+    background-image: url(/images/desktop/image-photography.jpg);
   }
 }
 .features__title2 {
@@ -520,14 +520,14 @@ p {
   }
 }
 .gallery__image--milk {
-  background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+  background-image: url(/images/mobile/image-gallery-milkbottles.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media (min-width: 40em) {
   .gallery__image--milk {
-    background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+    background-image: url(/images/desktop/image-gallery-milkbottles.jpg);
   }
 }
 .gallery__image--orange {
@@ -538,29 +538,29 @@ p {
 }
 @media (min-width: 40em) {
   .gallery__image--orange {
-    background-image: url(./images/desktop/image-gallery-orange.jpg);
+    background-image: url(/images/desktop/image-gallery-orange.jpg);
   }
 }
 .gallery__image--cone {
-  background-image: url(./images/mobile/image-gallery-cone.jpg);
+  background-image: url(/images/mobile/image-gallery-cone.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media (min-width: 40em) {
   .gallery__image--cone {
-    background-image: url(./images/desktop/image-gallery-cone.jpg);
+    background-image: url(/images/desktop/image-gallery-cone.jpg);
   }
 }
 .gallery__image--cubes {
-  background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+  background-image: url(/images/mobile/image-gallery-sugar-cubes.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media (min-width: 40em) {
   .gallery__image--cubes {
-    background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+    background-image: url(/images/desktop/image-gallery-sugarcubes.jpg);
   }
 }
 
