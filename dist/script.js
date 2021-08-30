@@ -1,0 +1,2 @@
+"use strict";var btnHamburger=document.querySelector("#btnHamburger"),body=document.querySelector("body"),btnMenu=document.querySelector(".header__menu");btnHamburger.addEventListener("click",(function(){btnHamburger.classList.contains("open")?(btnHamburger.classList.remove("open"),btnMenu.classList.add("hidden"),body.classList.remove("noscroll")):(btnHamburger.classList.add("open"),btnMenu.classList.remove("hidden"),body.classList.add("noscroll"))}));
+//# sourceMappingURL=script.js.map
