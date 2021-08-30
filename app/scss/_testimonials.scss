@@ -76,11 +76,13 @@
         font-family: var.$fraunces;
         font-weight: 900;
         color: var.$veryDarkDesaturatedBlue;
+        margin-top: 0;
         margin-bottom: 1rem;
         
     }
 
     &__title {
+        margin: 0;
         font-size: 0.875rem;
         color: var.$grayishBlue;
     }

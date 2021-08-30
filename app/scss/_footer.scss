@@ -16,13 +16,22 @@
         margin-bottom: 2.625rem;
     }
 
-    &__links {
-        display: flex;
-        justify-content: space-around;
+    &__links {        
+        
         max-width: 23.4375rem;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 5.6875rem;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            li {
+                display: inline;
+            }
+        }
 
         a {
             color: var.$darkModerateCyan;
@@ -39,6 +48,16 @@
         max-width: 23.4375rem;
         margin: 0 auto;
         
+        ul {
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: inline;
+                
+            }
+        }
+
         a {
             padding: 0.9375rem; 
         }

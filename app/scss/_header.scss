@@ -41,6 +41,7 @@
 
     &__toggle {                       
         transition: opacity 250ms ease-in-out;
+        cursor: pointer;
 
         > span {
             display: block;
@@ -62,14 +63,30 @@
         flex-grow: 0.25;
         text-align: center;
         
+        ul {
+            list-style: none;
+            
+            li {
+                display: inline;
+                
+                &:not(:last-child){
+                    margin-right: 50px;
+                }
+            }
+        }
+
         a {
             font-size: 1.0625rem;
             color: var.$white;
+            transition: color 250ms ease-in-out;
 
-            &:not(:last-child){
-                margin-right: 50px;
+            &:hover {
+                color: var.$yellow;
+
             }
         }
+
+        
 
     }
 
@@ -102,9 +119,7 @@
         width: calc(100% - 2.75rem);
         left: 50%;
         transform: translatex(-50%);
-        transition: all 250ms ease-in-out;
-        
-        
+        transition: all 250ms ease-in-out; 
 
         &::after {
             content: "";
@@ -119,24 +134,32 @@
             
             
         }
-        
-     
-        > a {
-            font-size: 1.125rem;
-            color: var.$veryDarkDesaturatedBlue;            
-            display: block;                      
-            &:not(:last-child) {
-                margin-bottom: 2rem;
-            }
-        }
 
-        a.button {
-            background-color: var.$yellow;
-            width: 8.75rem;
-            margin: auto;
-            font-weight: 900;            
+        ul {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+            list-style: none;      
             
-        }
+
+
+            a {
+                font-size: 1.125rem;
+                color: var.$darkGrayishBlue;           
+                
+            }
+    
+            a.button {
+                background-color: var.$yellow;
+                width: 8.75rem;
+                font-weight: 900;            
+                
+            }
+        }        
+     
     }
 
     &__text-and-arrow {        
